@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing import sequence
 word_index = imdb.get_word_index()
 reversed_word_index = {value:key for key,value in word_index.items()}
 
-model = load_model('SentimentModel.keras')
+model = load_model('SentimentModel.keras',compile=False)
 
 
 def decode_review(encoded_text):
